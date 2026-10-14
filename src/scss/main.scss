@@ -1,0 +1,10 @@
+@use 'abstracts/mixins' as *;
+
+.test {
+  padding: 20px;
+  background: tomato;
+
+  @include respond-to('tablet') {
+    background: green;
+  }
+}

@@ -1,0 +1,13 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// Mobile-first
+@mixin respond-to($name) {
+  @if map.has-key($breakpoints, $name) {
+    @media (min-width: map.get($breakpoints, $name)) {
+      @content;
+    }
+  } @else {
+    @error 'Брейкпоинт "#{$name}" не найден в $breakpoints';
+  }
+}

@@ -1,0 +1,65 @@
+// Отступы (padding) и рамка входят в ширину блока, а не прибавляются к ней
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Убираем стандартные внешние отступы браузера у всех элементов
+* {
+  margin: 0;
+}
+
+html {
+  // Запрещает iPhone самому увеличивать текст при повороте экрана
+  -webkit-text-size-adjust: 100%;
+  // Плавная прокрутка к якорям (ссылкам вида #contact)
+  scroll-behavior: smooth;
+}
+
+body {
+  // Страница минимум на всю высоту экрана
+  min-height: 100vh;
+  // Межстрочный интервал: 1.5 от размера шрифта
+  line-height: 1.5;
+  // Сглаживание шрифта на Mac, буквы выглядят аккуратнее
+  -webkit-font-smoothing: antialiased;
+}
+
+// Картинки, видео и svg ведут себя как блоки и не вылезают за свой контейнер
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+// Поля форм и кнопки берут шрифт и цвет текста от страницы
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+// Ссылки: цвет как у окружающего текста, без подчёркивания
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// У кнопок курсор-«рука» при наведении
+button {
+  cursor: pointer;
+}
+
+// Если у человека в системе включено «уменьшить движение», отключаем анимации
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

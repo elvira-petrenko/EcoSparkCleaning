@@ -35,7 +35,6 @@
 
 // Картинка плавно увеличивается при наведении
 // Родитель обрезает лишнее (overflow: hidden), чтобы картинка не вылезала за рамку
-// Пример: @include hover-zoom;
 @mixin hover-zoom($scale: 1.1) {
   overflow: hidden;
 
@@ -47,6 +46,17 @@
   @media (hover: hover) {
     &:hover img {
       transform: scale($scale);
+    }
+  }
+}
+
+// Цвет текста плавно меняется при наведении
+@mixin hover-color($color) {
+  transition: color $transition-base;
+
+  @media (hover: hover) {
+    &:hover {
+      color: $color;
     }
   }
 }

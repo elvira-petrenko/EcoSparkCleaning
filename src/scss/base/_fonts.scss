@@ -1,8 +1,4 @@
-// Подключение шрифта Parkinsans (файлы лежат в src/assets/fonts)
-// font-family: имя, по которому мы потом будем вызывать шрифт
-// font-weight: толщина (300 Light, 400 Regular, 500 Medium, 600 SemiBold)
-// font-display: swap: пока шрифт грузится, показывается обычный, чтобы текст не пропадал
-
+// Parkinsans
 @font-face {
   font-family: 'Parkinsans';
   src: url('../../assets/fonts/Parkinsans-Light.woff2') format('woff2');
@@ -31,6 +27,23 @@
   font-family: 'Parkinsans';
   src: url('../../assets/fonts/Parkinsans-SemiBold.woff2') format('woff2');
   font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Winky Sans (400 и 500)
+@font-face {
+  font-family: 'Winky Sans';
+  src: url('../../assets/fonts/winky-sans-v3-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Winky Sans';
+  src: url('../../assets/fonts/winky-sans-v3-latin-500.woff2') format('woff2');
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }

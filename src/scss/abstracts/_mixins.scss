@@ -33,4 +33,22 @@
   grid-column: span $count;
 }
 
+// Картинка плавно увеличивается при наведении
+// Родитель обрезает лишнее (overflow: hidden), чтобы картинка не вылезала за рамку
+// Пример: @include hover-zoom;
+@mixin hover-zoom($scale: 1.1) {
+  overflow: hidden;
+
+  img {
+    transition: transform $transition-base;
+  }
+
+  // Только там, где есть мышь (на телефонах наведения нет)
+  @media (hover: hover) {
+    &:hover img {
+      transform: scale($scale);
+    }
+  }
+}
+
 

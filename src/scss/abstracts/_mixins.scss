@@ -12,3 +12,25 @@
     @error 'Брейкпоинт "#{$name}" не найден в $breakpoints';
   }
 }
+
+// Grid-container
+@mixin grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: $grid-gap;
+
+  @include respond-to('tablet') {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @include respond-to('desktop') {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+// Сколько колонок занимает элемент
+@mixin grid-span($count) {
+  grid-column: span $count;
+}
+
+

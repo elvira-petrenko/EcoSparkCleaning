@@ -12,17 +12,3 @@
     @error 'Брейкпоинт "#{$name}" не найден в $breakpoints';
   }
 }
-// Colors
-$color-black: #000000;
-$color-white: #ffffff;
-$color-primary: #f2d701;
-$color-primary-light: #f4f6f0;
-$color-secondary: #3ca20c;
-$color-secondary-dark: rgba(60, 162, 0, 0.3);
-$color-secondary-light: #e8f5d3;
-$color-gray: #d5d8dc;
-$color-gray-light: rgba(0, 0, 0, 0.6);
-$color-black-light: rgba(153, 153, 153, 0.1);
-$color-white-transparent: rgba(255, 255, 255, 0.2);
-$color-background-light: #fcfdfb;
-$color-background-blue: #f4f6fc;
